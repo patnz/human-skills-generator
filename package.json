@@ -43,8 +43,9 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "lodash": "^4.17.21",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "lodash": "^4.17.21"
+   
   },
   "devDependencies": {
     "@babel/core": "^7.15.6",
@@ -79,6 +80,7 @@
     "prettier": "2.6.1",
     "react": "^18.0.2",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.9.0",
     "superagent": "7.1.1",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",
