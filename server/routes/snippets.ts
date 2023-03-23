@@ -12,7 +12,7 @@ router.get('/appSnippet', (req, res) => {
   fs.readFile('./client/common/appSnippets.json')
     .then((appSnippets: Snippets) => {
       const rand = _.random(0, appSnippets.snippets.length - 1)
-      res.send(appSnippets.snippets[rand])
+      res.json(appSnippets.snippets[rand])
     })
     .catch((err: Error) => {
       res.status(500).send(err.message)
@@ -23,7 +23,7 @@ router.get('/requirementSnippet', (req, res) => {
   fs.readFile('./client/common/requirementSnippets.json')
     .then((requirementSnippets: Snippets) => {
       const rand = _.random(0, requirementSnippets.snippets.length - 1)
-      res.send(requirementSnippets.snippets[rand])
+      res.json(requirementSnippets.snippets[rand])
     })
     .catch((err: Error) => {
       res.status(500).send(err.message)
@@ -33,8 +33,14 @@ router.get('/requirementSnippet', (req, res) => {
 router.get('/whatsOnTopSnippet', (req, res) => {
   fs.readFile('./client/common/whatsOnTopSnippets.json')
     .then((whatsOnTopSnippets: Snippets) => {
-      const rand = _.random(0, whatsOnTopSnippets.snippets.length - 1)
-      res.send(whatsOnTopSnippets.snippets[rand])
+      const parsedData = JSON.parse(whatsOnTopSnippets)
+      const rand = _.random(0, parsedData.snippets.length - 1)
+      res.json(parsedData.snippets[rand])
+
+      // const rand = _.random(0, whatsOnTopSnippets.snippets.length - 1)
+      // res.json(whatsOnTopSnippets.snippets[rand])
+
+      // res.json(JSON.parse(whatsOnTopSnippets))
     })
     .catch((err: Error) => {
       res.status(500).send(err.message)
