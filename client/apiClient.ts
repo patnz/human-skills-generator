@@ -16,5 +16,21 @@ export function getCorporateBullshit(): Promise<string> {
     .then((res) => res.body.phrase)
 }
 
+export function getAppSnippet(): Promise<string> {
+  return request.get('/api/v1/snippets/appSnippet').then((res) => res.body)
+}
+
+export function getRequirementSnippet(): Promise<string> {
+  return request
+    .get('/api/v1/snippets/requirementSnippet')
+    .then((res) => res.body)
+}
+
+export function getWhatsOnTopSnippet(): Promise<string> {
+  return request
+    .get('/api/v1/snippets/whatsOnTopSnippet')
+    .then((res) => res.body)
+}
+
 // write api route for boredapi to feed into fridayproject
 // stretch: dropdown select menu which generates diff types of projects (e.g. 'educational')
