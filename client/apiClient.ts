@@ -15,3 +15,6 @@ export function getCorporateBullshit(): Promise<string> {
     .get('https://corporatebs-generator.sameerkumar.website/')
     .then((res) => res.body.phrase)
 }
+
+// write api route for boredapi to feed into fridayproject
+// stretch: dropdown select menu which generates diff types of projects (e.g. 'educational')

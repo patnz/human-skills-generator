@@ -11,6 +11,7 @@ const WhatsOnTop = () => {
   async function clickHandler() {
     return getUselessFact()
       .then((fact) => {
+        // THESE LODASH METHODS ARE JUST REFORMATTING THE INCOMING DATA
         const formattedFact = _.lowerFirst(fact)
         const reformattedFact = _.replace(formattedFact, '`', "'")
         console.log(reformattedFact)
@@ -32,13 +33,21 @@ const WhatsOnTop = () => {
 
   return (
     <>
-      <button onClick={clickHandler}>fact</button>
+      <h1>Whats on Top</h1>
+      <button onClick={clickHandler}>GENERATE</button>
       {uselessFact && (
-        <div>
+        <div className="component-container">
           <h1>
-            I'm pretty tired today, I couldn't sleep last night thinking about
+            <i>
+              {' '}
+              "I’ve spent a lot of time recently trying to {
+                corporateBullshit
+              }{' '}
+              based on the fact that {uselessFact}"
+            </i>
+            {/* I'm pretty tired today, I couldn't sleep last night thinking about
             the fact that {uselessFact} I stayed up all night, thinking about
-            how to use this fact to {corporateBullshit}
+            how to use this fact to {corporateBullshit} */}
           </h1>
         </div>
       )}
