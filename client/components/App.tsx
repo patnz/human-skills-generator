@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getGreeting } from '../apiClient'
+import WhatsOnTop from './WhatsOnTop'
 
 const App = () => {
   const [greeting, setGreeting] = useState('')
@@ -29,6 +30,7 @@ const App = () => {
         </p>
       )}
       <button onClick={() => setCount(count + 1)}>Click</button>
+      <WhatsOnTop />
     </>
   )
 }
