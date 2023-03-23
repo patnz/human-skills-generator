@@ -62,14 +62,22 @@ body {
   margin-top: 30px;
 }
 
+.navDiv {
+ position: absolute;
+ left: 173.5px;
+
+}
+
 .nav-listitem {
   text-decoration: none;
   display: inline-flex;
-  justify-content: end;
   padding-top: 30px;
   font-size: 20px;
   font-weight: 600;
   transition: 100ms;
+  margin-left: 10px;
+  margin-right: 10px 
+
 }
 
 .nav-listitem:hover {
@@ -77,15 +85,19 @@ body {
 }
 
 .nav-line {
- margin-top: 40px;
+ margin-top: 75px;
 }
 
 /* Home */
 
+.home-container {
+  
+}
+
 #home-heading {
-  position: relative;
+  /* position: relative;
   bottom: 300px;
-  left: 100px;
+  left: 100px; */
   text-align: left;
   max-width: 250px;
   font-weight: 600;
@@ -94,8 +106,8 @@ body {
 }
 
 .home-background {
-  margin-top: 60px;
-  max-height: 400px;
+  margin-top: 100px;
+  height: 500rem;
   width: 100%;
 }
 
