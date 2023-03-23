@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react'
 import { getUselessFact } from '../apiClient'
 import { getCorporateBullshit } from '../apiClient'
+import { getWhatsOnTopSnippet } from '../apiClient'
 
 const _ = require('lodash')
 
 const WhatsOnTop = () => {
   const [uselessFact, setUselessFact] = useState('')
   const [corporateBullshit, setCorporateBullshit] = useState('')
+  const [whatsOnTopSnippet, setWhatsOnTopSnippet] = useState('')
 
   async function clickHandler() {
     return getUselessFact()
@@ -21,6 +23,13 @@ const WhatsOnTop = () => {
             setCorporateBullshit(formattedBullshit)
             console.log(formattedBullshit)
             setUselessFact(reformattedFact)
+            getWhatsOnTopSnippet()
+              .then((snippet) => {
+                setWhatsOnTopSnippet(snippet)
+              })
+              .catch((err) => {
+                err.message
+              })
           })
           .catch((err) => {
             console.log(err)
@@ -35,15 +44,12 @@ const WhatsOnTop = () => {
     <>
       <h1>Whats on Top</h1>
       <button onClick={clickHandler}>GENERATE</button>
-      {uselessFact && (
+      {whatsOnTopSnippet && (
         <div className="component-container">
           <h1>
             <i>
-              {' '}
-              "I’ve spent a lot of time recently trying to {
-                corporateBullshit
-              }{' '}
-              based on the fact that {uselessFact}"
+              {whatsOnTopSnippet}
+              {corporateBullshit} based on the fact that {uselessFact}
             </i>
             {/* I'm pretty tired today, I couldn't sleep last night thinking about
             the fact that {uselessFact} I stayed up all night, thinking about
