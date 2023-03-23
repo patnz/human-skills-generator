@@ -43,8 +43,8 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.2",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "express": "^4.17.2"
   },
   "devDependencies": {
     "@babel/core": "^7.15.6",
