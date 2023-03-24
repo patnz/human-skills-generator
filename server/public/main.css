@@ -130,6 +130,17 @@ body {
 
 }
 
+.buttonX {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.component-container {
+  text-align: center;
+  font-size: 2em;
+  line-height: 1em;
+  padding: 10% 30%;
+}
 
 /* Footer */
 /* 
@@ -153,10 +164,7 @@ body {
   bottom: 25px;
   color: white;
   text-align: center;
-<<<<<<< HEAD
-} */
-=======
-}
+
 
 .component-container {
   z-index: 2;
@@ -165,4 +173,4 @@ body {
   font-size: 2em;
   line-height: 2em;
 }
->>>>>>> 58a9aef1e069c2e9e075d509d1210bebf019ad2f
+
