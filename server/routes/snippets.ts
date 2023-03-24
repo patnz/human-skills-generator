@@ -47,4 +47,28 @@ router.get('/whatsOnTopSnippet', (req, res) => {
     })
 })
 
+router.get('/clapSnippet1', (req, res) => {
+  fs.readFile('./client/common/clapSnippets1.json')
+    .then((clapSnippets: Snippets) => {
+      const parsedData = JSON.parse(clapSnippets)
+      const rand = _.random(0, parsedData.snippets.length - 1)
+      res.json(parsedData.snippets[rand])
+    })
+    .catch((err: Error) => {
+      res.status(500).send(err.message)
+    })
+})
+
+router.get('/clapSnippet2', (req, res) => {
+  fs.readFile('./client/common/clapSnippets2.json')
+    .then((clapSnippets: Snippets) => {
+      const parsedData = JSON.parse(clapSnippets)
+      const rand = _.random(0, parsedData.snippets.length - 1)
+      res.json(parsedData.snippets[rand])
+    })
+    .catch((err: Error) => {
+      res.status(500).send(err.message)
+    })
+})
+
 export default router

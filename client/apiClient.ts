@@ -32,5 +32,13 @@ export function getWhatsOnTopSnippet(): Promise<string> {
     .then((res) => res.body)
 }
 
+export function getClapSnippet1(): Promise<string> {
+  return request.get('/api/v1/snippets/clapSnippet1').then((res) => res.body)
+}
+
+export function getClapSnippet2(): Promise<string> {
+  return request.get('/api/v1/snippets/clapSnippet2').then((res) => res.body)
+}
+
 // write api route for boredapi to feed into fridayproject
 // stretch: dropdown select menu which generates diff types of projects (e.g. 'educational')
