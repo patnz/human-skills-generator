@@ -42,6 +42,7 @@ const WhatsOnTop = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <div className="home-container">
         <img
           className="home-background"
@@ -53,6 +54,11 @@ const WhatsOnTop = () => {
         {/* <div className="buttons"> */}
         <button onClick={clickHandler}>GENERATE</button>
         {/* </div> */}
+=======
+      <div className="component-container">
+        <h1>Whats on Top</h1>
+        <button onClick={clickHandler}>GENERATE</button>
+>>>>>>> 58a9aef1e069c2e9e075d509d1210bebf019ad2f
       </div>
       {whatsOnTopSnippet && (
         <div className="component-container">

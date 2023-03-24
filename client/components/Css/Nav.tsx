@@ -14,15 +14,23 @@ function Nav() {
       </div>
       <div className="navDiv">
         <div className="nav-listitem">
+<<<<<<< HEAD
           <Link to="/whatsOnTopSnippet">WHATS ON TOP</Link>
         </div>
 
         <div className="nav-listitem">
           <Link to="">FRIDAY PROJECT GENERATOR</Link>
+=======
+          <Link to="/fridayproject">FRIDAY PROJECT GENERATOR</Link>
         </div>
 
         <div className="nav-listitem">
-          <Link to="">CLAP IDEAS</Link>
+          <Link to="/whatsontop">WHATS ON TOP</Link>
+>>>>>>> 58a9aef1e069c2e9e075d509d1210bebf019ad2f
+        </div>
+
+        <div className="nav-listitem">
+          <Link to="/clap">CLAP IDEAS</Link>
         </div>
       </div>
       <div>
