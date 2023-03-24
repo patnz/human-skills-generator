@@ -11,11 +11,15 @@ const App = () => {
     <>
       <Nav />
       <Routes>
+<<<<<<< HEAD
+        <Route path="/whatsOnTopSnippet" element={<WhatsOnTop />} />
+        <Route path="/" element={<Home />} />
+=======
         <Route path="/whatsontop" element={<WhatsOnTop />} />
         <Route path="/clap" element={<Clap />} />
         <Route path="/fridayproject" element={<FridayProject />} />
+>>>>>>> 58a9aef1e069c2e9e075d509d1210bebf019ad2f
       </Routes>
-      <Home />
     </>
   )
 }
