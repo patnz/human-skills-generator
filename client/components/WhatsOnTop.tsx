@@ -48,12 +48,9 @@ const WhatsOnTop = () => {
         <div className="component-container">
           <h1>
             <i>
-              {whatsOnTopSnippet}
-              {corporateBullshit} based on the fact that {uselessFact}
+              "{whatsOnTopSnippet}
+              {corporateBullshit} based on the fact that {uselessFact}"
             </i>
-            {/* I'm pretty tired today, I couldn't sleep last night thinking about
-            the fact that {uselessFact} I stayed up all night, thinking about
-            how to use this fact to {corporateBullshit} */}
           </h1>
         </div>
       )}
