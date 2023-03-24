@@ -10,9 +10,10 @@ interface Snippets {
 
 router.get('/appSnippet', (req, res) => {
   fs.readFile('./client/common/appSnippets.json')
-    .then((appSnippets: Snippets) => {
-      const rand = _.random(0, appSnippets.snippets.length - 1)
-      res.json(appSnippets.snippets[rand])
+    .then((appSnippets: string) => {
+      const parsedData: Snippets = JSON.parse(appSnippets)
+      const rand = _.random(0, parsedData.snippets.length - 1)
+      res.json(parsedData.snippets[rand])
     })
     .catch((err: Error) => {
       res.status(500).send(err.message)
@@ -21,9 +22,10 @@ router.get('/appSnippet', (req, res) => {
 
 router.get('/requirementSnippet', (req, res) => {
   fs.readFile('./client/common/requirementSnippets.json')
-    .then((requirementSnippets: Snippets) => {
-      const rand = _.random(0, requirementSnippets.snippets.length - 1)
-      res.json(requirementSnippets.snippets[rand])
+    .then((requirementSnippets: string) => {
+      const parsedData: Snippets = JSON.parse(requirementSnippets)
+      const rand = _.random(0, parsedData.snippets.length - 1)
+      res.json(parsedData.snippets[rand])
     })
     .catch((err: Error) => {
       res.status(500).send(err.message)
@@ -32,15 +34,10 @@ router.get('/requirementSnippet', (req, res) => {
 
 router.get('/whatsOnTopSnippet', (req, res) => {
   fs.readFile('./client/common/whatsOnTopSnippets.json')
-    .then((whatsOnTopSnippets: Snippets) => {
-      const parsedData = JSON.parse(whatsOnTopSnippets)
+    .then((whatsOnTopSnippets: string) => {
+      const parsedData: Snippets = JSON.parse(whatsOnTopSnippets)
       const rand = _.random(0, parsedData.snippets.length - 1)
       res.json(parsedData.snippets[rand])
-
-      // const rand = _.random(0, whatsOnTopSnippets.snippets.length - 1)
-      // res.json(whatsOnTopSnippets.snippets[rand])
-
-      // res.json(JSON.parse(whatsOnTopSnippets))
     })
     .catch((err: Error) => {
       res.status(500).send(err.message)
