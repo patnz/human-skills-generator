@@ -42,8 +42,18 @@ const WhatsOnTop = () => {
 
   return (
     <>
-      <h1>Whats on Top</h1>
-      <button onClick={clickHandler}>GENERATE</button>
+      <div className="home-container">
+        <img
+          className="home-background"
+          src="./images/home-background.png"
+          alt="home-background"
+        />
+
+        <h1 id="home-heading">Whats on Top</h1>
+        {/* <div className="buttons"> */}
+        <button onClick={clickHandler}>GENERATE</button>
+        {/* </div> */}
+      </div>
       {whatsOnTopSnippet && (
         <div className="component-container">
           <h1>

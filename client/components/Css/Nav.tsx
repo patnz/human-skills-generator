@@ -14,11 +14,11 @@ function Nav() {
       </div>
       <div className="navDiv">
         <div className="nav-listitem">
-          <Link to="">FRIDAY PROJECT GENERATOR</Link>
+          <Link to="/whatsOnTopSnippet">WHATS ON TOP</Link>
         </div>
 
         <div className="nav-listitem">
-          <Link to="">WHATS ON TOP</Link>
+          <Link to="">FRIDAY PROJECT GENERATOR</Link>
         </div>
 
         <div className="nav-listitem">
