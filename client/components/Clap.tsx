@@ -27,13 +27,17 @@ const Clap = () => {
 
   return (
     <>
-      <button onClick={clickHandler}>GENERATE</button>
+      <div className="component-container">
+        <div className="buttonX">
+          <button onClick={clickHandler}>GENERATE</button>
+        </div>
 
-      {clapSnippet2 && (
-        <p>
-          {clapSnippet1} .. {clapSnippet2}
-        </p>
-      )}
+        {clapSnippet2 && (
+          <p>
+            {clapSnippet1} ... {clapSnippet2}
+          </p>
+        )}
+      </div>
     </>
   )
 }
