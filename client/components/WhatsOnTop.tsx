@@ -42,8 +42,10 @@ const WhatsOnTop = () => {
 
   return (
     <>
-      <h1>Whats on Top</h1>
-      <button onClick={clickHandler}>GENERATE</button>
+      <div className="component-container">
+        <h1>Whats on Top</h1>
+        <button onClick={clickHandler}>GENERATE</button>
+      </div>
       {whatsOnTopSnippet && (
         <div className="component-container">
           <h1>

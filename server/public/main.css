@@ -134,3 +134,11 @@ body {
   color: white;
   text-align: center;
 }
+
+.component-container {
+  z-index: 2;
+  background: none;
+  text-align: center;
+  font-size: 2em;
+  line-height: 2em;
+}
