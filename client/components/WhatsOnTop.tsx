@@ -40,29 +40,55 @@ const WhatsOnTop = () => {
       })
   }
 
-  return (
-    <>
-      <div className="home-container">
-        <h1 id="home-heading">Whats on Top</h1>
-        {/* <div className="buttons"> */}
-        <div className="buttonX">
-          <button onClick={clickHandler}>GENERATE</button>
-        </div>
+  // function clickHandler() {
+  //   const returnedBullshit = Promise.resolve(getCorporateBullshit)
+  //   const returnedFact = Promise.resolve(getUselessFact)
+  //   const returnedOnTopSnippet = Promise.resolve(getWhatsOnTopSnippet)
 
-        {/* </div> */}
+  //   Promise.all([returnedBullshit, returnedFact, returnedOnTopSnippet])
+  //     .then((promiseArray) => {
+  //       console.log(returnedBullshit)
+  //     })
+  //     .catch((err) => console.log(err.message))
+  // }
+
+  // async function clickHandler() {
+  //   const returnedBullshit = await getCorporateBullshit()
+  //   const formattedBullshit = _.lowerCase(returnedBullshit)
+  //   setCorporateBullshit(await formattedBullshit)
+
+  //   const returnedFact = await getUselessFact()
+  //   const formattedFact = _.lowerFirst(returnedFact)
+  //   const reformattedFact = _.replace(formattedFact, '`', "'")
+  //   setUselessFact(await reformattedFact)
+
+  //   const returnedOnTopSnippet = await getWhatsOnTopSnippet()
+  //   setWhatsOnTopSnippet(await returnedOnTopSnippet)
+  // }
+
+  if (whatsOnTopSnippet) {
+    return (
+      // I NEED TO ADD A KEYBOARD LISTENER HERE!!
+      <div className="component-container" onClick={clickHandler}>
+        <h1>
+          <i>
+            "{whatsOnTopSnippet}
+            {corporateBullshit} based on the fact that {uselessFact}"
+          </i>
+        </h1>
       </div>
-      {whatsOnTopSnippet && (
-        <div className="component-container">
-          <h1>
-            <i>
-              "{whatsOnTopSnippet}
-              {corporateBullshit} based on the fact that {uselessFact}"
-            </i>
-          </h1>
+    )
+  } else
+    return (
+      <>
+        <div className="home-container">
+          <h1 id="home-heading">Whats on Top</h1>
+          <div className="buttonX">
+            <button onClick={clickHandler}>GENERATE</button>
+          </div>
         </div>
-      )}
-    </>
-  )
+      </>
+    )
 }
 
 export default WhatsOnTop
