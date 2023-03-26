@@ -47,15 +47,17 @@ export function FridayProject2() {
   if (appSnippet) {
     return (
       <div className="component-container">
-        {`Create ${appSnippet} that uses ${reqSnippet} to help you ${boredSnippet}`}
+        <div className="generate-button">
+          <div className="generate-button-text">{`Create ${appSnippet} that uses ${reqSnippet} to help you ${boredSnippet}`}</div>
+        </div>
       </div>
     )
   } else
     return (
       <div className="component-container">
-        <form onSubmit={handleSumbit}>
+        <form className="form-container" onSubmit={handleSumbit}>
           <label htmlFor="button">
-            What kind of App do would you like to make?
+            What kind of App would you like to make?
           </label>
           <select name="activity" id="button" onChange={changeHandler}>
             <option value="education">education</option>
@@ -68,7 +70,9 @@ export function FridayProject2() {
             <option value="charity">charity</option>
             <option value="diy">diy</option>
           </select>
-          <button type="submit">Create project</button>
+          <button className="mini-generate-button" type="submit">
+            Create project
+          </button>
         </form>
       </div>
     )

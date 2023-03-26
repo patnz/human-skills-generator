@@ -69,23 +69,22 @@ const WhatsOnTop = () => {
   if (whatsOnTopSnippet) {
     return (
       // I NEED TO ADD A KEYBOARD LISTENER HERE!!
-      <div className="component-container" onClick={clickHandler}>
-        <h1>
+      <div className="component-container">
+        <button className="generate-button" onClick={clickHandler}>
           <i>
             "{whatsOnTopSnippet}
             {corporateBullshit} based on the fact that {uselessFact}"
           </i>
-        </h1>
+        </button>
       </div>
     )
   } else
     return (
       <>
-        <div className="home-container">
-          <h1 id="home-heading">Whats on Top</h1>
-          <div className="buttonX">
-            <button onClick={clickHandler}>GENERATE</button>
-          </div>
+        <div className="component-container">
+          <button className="mini-generate-button" onClick={clickHandler}>
+            What's on Top?
+          </button>
         </div>
       </>
     )

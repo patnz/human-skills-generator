@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Nav from './Css/Nav'
+import Nav from './Nav'
 import Home from './Home'
 import FridayProject from './FridayProject'
 import FridayProject2 from './FridayProject2'
