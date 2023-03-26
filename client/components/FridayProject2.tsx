@@ -60,18 +60,18 @@ export function FridayProject2() {
             What kind of App would you like to make?
           </label>
           <select name="activity" id="button" onChange={changeHandler}>
-            <option value="education">education</option>
-            <option value="social">social</option>
-            <option value="recreational">recreational</option>
-            <option value="relaxation">relaxation</option>
-            <option value="music">music</option>
-            <option value="busywork">busywork</option>
-            <option value="cooking">cooking</option>
-            <option value="charity">charity</option>
-            <option value="diy">diy</option>
+            <option value="education">Education</option>
+            <option value="social">Social</option>
+            <option value="recreational">Recreational</option>
+            <option value="relaxation">Relaxation</option>
+            <option value="music">Music</option>
+            <option value="busywork">Busywork</option>
+            <option value="cooking">Cooking</option>
+            <option value="charity">Charity</option>
+            <option value="diy">DIY</option>
           </select>
           <button className="mini-generate-button" type="submit">
-            Create project
+            CREATE PROJECT
           </button>
         </form>
       </div>

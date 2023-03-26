@@ -3,7 +3,9 @@
 function Home() {
   return (
     <div className="component-container">
-      <h1 id="home-heading">HUMAN SKILLS GENERATOR</h1>
+      <div className="home-heading">HUMAN</div>
+      <div className="home-heading">SKILLS</div>
+      <div className="home-heading">GENERATOR</div>
     </div>
   )
 }

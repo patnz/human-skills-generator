@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 function Nav() {
   return (
     <div className="nav-container">
-      <Link className="nav-logo-container" to="/">
+      <Link id="nav-logo" className="nav-logo-container" to="/">
         <img
           className="nav-logo"
           src="./images/horizontal_dark-text-1536x436.png"
@@ -11,14 +11,20 @@ function Nav() {
         />
       </Link>
       <div className="nav-item-container">
-        <Link className="nav-item" to="/whatsontop">
-          WHATS ON TOP
+        <Link id="nav1" className="nav-item" to="/whatsontop">
+          <div className="nav-text">WHATS</div>
+          <div className="nav-text">ON</div>
+          <div className="nav-text">TOP</div>
         </Link>
-        <Link className="nav-item" to="/fridayproject">
-          FRIDAY PROJECT GENERATOR
+        <Link id="nav2" className="nav-item" to="/fridayproject">
+          <div className="nav-text">FRIDAY</div>
+          <div className="nav-text">PROJECT</div>
+          <div className="nav-text">GENERATOR</div>
         </Link>
-        <Link className="nav-item" to="/clap">
-          CLAP IDEAS
+        <Link id="nav3" className="nav-item" to="/clap">
+          <div className="nav-text">LAST</div>
+          <div className="nav-text">MINUTE</div>
+          <div className="nav-text">CLAPS</div>
         </Link>
       </div>
     </div>

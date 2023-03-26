@@ -32,9 +32,8 @@ const Clap = () => {
         <button className="generate-button" onClick={clickHandler}>
           <i>
             <div className="generate-button-text">
-              <p>{clapSnippet1}</p>
-              <p>...</p>
-              <p>{clapSnippet2}</p>
+              <p>{clapSnippet1}...</p>
+              <p> {clapSnippet2}</p>
             </div>
           </i>
         </button>
@@ -45,7 +44,7 @@ const Clap = () => {
       <>
         <div className="component-container">
           <button className="mini-generate-button" onClick={clickHandler}>
-            CLAP
+            GENERATE A CLAP IDEA
           </button>
         </div>
       </>

@@ -14,12 +14,12 @@ const WhatsOnTop = () => {
     return getUselessFact()
       .then((fact) => {
         // THESE LODASH METHODS ARE JUST REFORMATTING THE INCOMING DATA
-        const formattedFact = _.lowerFirst(fact)
+        const formattedFact = _.upperCase(fact)
         const reformattedFact = _.replace(formattedFact, '`', "'")
         console.log(reformattedFact)
         getCorporateBullshit()
           .then((bullshit) => {
-            const formattedBullshit = _.lowerCase(bullshit)
+            const formattedBullshit = _.upperCase(bullshit)
             setCorporateBullshit(formattedBullshit)
             console.log(formattedBullshit)
             setUselessFact(reformattedFact)
@@ -71,10 +71,8 @@ const WhatsOnTop = () => {
       // I NEED TO ADD A KEYBOARD LISTENER HERE!!
       <div className="component-container">
         <button className="generate-button" onClick={clickHandler}>
-          <i>
-            "{whatsOnTopSnippet}
-            {corporateBullshit} based on the fact that {uselessFact}"
-          </i>
+          "{whatsOnTopSnippet}
+          {corporateBullshit} based on the fact that {uselessFact}"
         </button>
       </div>
     )
@@ -83,7 +81,7 @@ const WhatsOnTop = () => {
       <>
         <div className="component-container">
           <button className="mini-generate-button" onClick={clickHandler}>
-            What's on Top?
+            WHATS ON TOP
           </button>
         </div>
       </>
