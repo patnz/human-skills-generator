@@ -1,5 +1,13 @@
 import request from 'superagent'
 
+export interface Activity {
+  activity: string
+  accessibility: number
+  type: string
+  participants: number
+  price: number
+}
+
 export function getGreeting(): Promise<string> {
   return request.get('/greeting').then((res) => res.body.greeting)
 }
@@ -38,6 +46,12 @@ export function getClapSnippet1(): Promise<string> {
 
 export function getClapSnippet2(): Promise<string> {
   return request.get('/api/v1/snippets/clapSnippet2').then((res) => res.body)
+}
+
+export function getActivity(activity: string): Promise<Activity> {
+  return request
+    .get(`http://www.boredapi.com/api/activity?type=${activity}`)
+    .then((res) => res.body)
 }
 
 // write api route for boredapi to feed into fridayproject

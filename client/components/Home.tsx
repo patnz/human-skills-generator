@@ -2,16 +2,11 @@
 
 function Home() {
   return (
-    <>
-      <div className="home-container">
-        <img
-          className="home-background"
-          src="./images/home-background.png"
-          alt="home-background"
-        />
-        <h1 id="home-heading">HUMAN SKILLS GENERATOR</h1>
-      </div>
-    </>
+    <div className="component-container">
+      <div className="home-heading">HUMAN</div>
+      <div className="home-heading">SKILLS</div>
+      <div className="home-heading">GENERATOR</div>
+    </div>
   )
 }
 

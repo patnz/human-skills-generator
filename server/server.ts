@@ -10,11 +10,8 @@ server.use(express.static(join(__dirname, './public')))
 server.use(cors('*' as CorsOptions))
 server.use('/api/v1/snippets', snippets)
 
-server.get('/greeting', (req, res) => {
-  const greetings = ['hola', 'hi', 'hello', 'howdy']
-  const index = Math.floor(Math.random() * greetings.length)
-  console.log(index)
-  res.json({ greeting: greetings[index] })
+server.get('*', (req, res) => {
+  res.sendFile(join(__dirname, '/public/index.html'))
 })
 
 export default server

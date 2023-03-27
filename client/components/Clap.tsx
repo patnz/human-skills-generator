@@ -25,21 +25,30 @@ const Clap = () => {
       })
   }
 
-  return (
-    <>
+  if (clapSnippet1) {
+    return (
+      // I NEED TO ADD A KEYBOARD LISTENER HERE!!
       <div className="component-container">
-        <div className="buttonX">
-          <button onClick={clickHandler}>GENERATE</button>
-        </div>
-
-        {clapSnippet2 && (
-          <p>
-            {clapSnippet1} ... {clapSnippet2}
-          </p>
-        )}
+        <button className="generate-button" onClick={clickHandler}>
+          <i>
+            <div className="generate-button-text">
+              <p>{clapSnippet1}...</p>
+              <p> {clapSnippet2}</p>
+            </div>
+          </i>
+        </button>
       </div>
-    </>
-  )
+    )
+  } else
+    return (
+      <>
+        <div className="component-container">
+          <button className="mini-generate-button" onClick={clickHandler}>
+            GENERATE A CLAP IDEA
+          </button>
+        </div>
+      </>
+    )
 }
 
 export default Clap
