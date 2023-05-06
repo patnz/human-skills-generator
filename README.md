@@ -1,36 +1,18 @@
-# Boilerplate: React with Webpack
-This is a starter project that uses webpack to transpile and bundle ES6 React code. 
+# Human Skills Generator
+Tired of pretending to be a real human? Let our app do it for you! 
 
-## Setup
+### But seriously...
+A big part of Dev Academy Aotearoa is about introspection and growth as individuals and team members.. not just the tech! This app is a cheeky dig at that. Throughout the week, we encounter **real life situations** where we contribute as individuals and this app is designed to **automate those human interactions**. How cool!
 
-### Installation
-To use, consider these steps:
+## WHAT'S ON TOP GENERATOR
+On a Friday morning the cohort gathers round in a seated circle and answers the question **What's on Top?**...
 
-* Fork this repo
-* Rename your repo according to the app you're building
+#### 1 x INTERNAL API, 2 x EXTERNAL API
+> Internal API calls a random preamble from a JSON file (I'm pretty tired today...)
+> External API calls a Corporate BS Generator API (https://github.com/sameerkumar18/corporate-bs-generator-api)
+> External API calls a Random Fact Generator (https://uselessfacts.jsph.pl)
 
-```sh
-git clone https://github.com/[your-account]/[your-app].git
-cd [your-app] && npm i
-```
+<img width="441" alt="Screenshot 2023-05-06 at 10 39 00 am" src="https://user-images.githubusercontent.com/114084721/236589197-c24a43e3-5fd8-43b2-bc07-a12d41bbdff5.png">
 
-To start the development server with a watcher that rebuilds your code, run `npm run dev`. The assets built by webpack are placed in `server/public`. This folder is defined as a static folder in an Express.js server that can be started with `npm run server`.
 
-Additional components should be placed in `client/components`.
-
----
-
-## Separate client/server
-
-The boilerplate is also set up to host the client using `webpack-dev-server` with hot module reloading etc. To use this method, in one terminal run:
-```sh
-npm run client
-```
-and in the other:
-```sh
-npm run server
-```
-The client will be available on http://localhost:8080 and the server on http://localhost:3000. Note that you will still need to manage CORS between the two, as they are on different ports.
-
----
-[Provide feedback on this repo](https://docs.google.com/forms/d/e/1FAIpQLSfw4FGdWkLwMLlUaNQ8FtP2CTJdGDUv6Xoxrh19zIrJSkvT4Q/viewform?usp=pp_url&entry.1958421517=boilerplate-react-api)
+TODO: WRITE DOCS FOR FRIDAY PROJECT / CLAP GENERATORS
