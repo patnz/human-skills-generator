@@ -9,11 +9,15 @@ A big part of Dev Academy Aotearoa is about introspection and growth as individu
 On a Friday morning the cohort gathers round in a seated circle and answers the question **What's on Top?**...
 
 - Internal API calls a random preamble from a JSON file
-  - ('I'm pretty tired today...')
-- External API calls the Corporate BS Generator API
+  - ('I'm pretty tired today. I stayed up all night thinking about how to...')
+- External API calls a snippet from the Corporate BS Generator API
   - (https://github.com/sameerkumar18/corporate-bs-generator-api)
+  - ('...progressively morph customized bandwidth...')
+- Hard-coded
+  - ('...based on the fact that...')
 - External API calls the Random Fact Generator API
   - (https://uselessfacts.jsph.pl)
+  - ('...the expression to get fired comes from long ago...')
 
 #### Generate!
 
