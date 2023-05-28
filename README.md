@@ -21,7 +21,7 @@ On a Friday morning the cohort gathers round in a seated circle and answers the 
 
 #### Generate!
 
-<img src="human-skills-screenshot(friday-project).png" width="500" height="auto">
+<img src="human-skills-screenshot(whats-on-top).png" width="500" height="auto">
 
 ## FRIDAY PROJECT GENERATOR
 #### (2 x INTERNAL RESTFUL APIs, 1 x EXTERNAL RESTFUL API)
