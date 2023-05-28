@@ -1,7 +1,7 @@
 # Human Skills Generator
-Tired of pretending to be a real human? Let our app do it for you! 
+###Tired of pretending to be a real human? Let our app do it for you! 
 
-### But seriously...
+#### But seriously...
 A big part of Dev Academy Aotearoa is about introspection and growth as individuals and team members.. not just the tech! This app is a cheeky dig at that. Throughout the week, we encounter **real life situations** where we contribute as individuals and this app is designed to **automate those human interactions**. How cool!
 
 ## WHAT'S ON TOP GENERATOR
