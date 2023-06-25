@@ -9,22 +9,24 @@ const WhatsOnTop = () => {
   const [uselessFact, setUselessFact] = useState('')
   const [corporateBullshit, setCorporateBullshit] = useState('')
   const [whatsOnTopSnippet, setWhatsOnTopSnippet] = useState('')
+  const [loading, setLoading] = useState(false)
 
   async function clickHandler() {
+    setLoading(true)
     return getUselessFact()
       .then((fact) => {
         // THESE LODASH METHODS ARE JUST REFORMATTING THE INCOMING DATA
+
         const formattedFact = _.upperCase(fact)
         const reformattedFact = _.replace(formattedFact, '`', "'")
-        console.log(reformattedFact)
         getCorporateBullshit()
           .then((bullshit) => {
             const formattedBullshit = _.upperCase(bullshit)
             setCorporateBullshit(formattedBullshit)
-            console.log(formattedBullshit)
             setUselessFact(reformattedFact)
             getWhatsOnTopSnippet()
               .then((snippet) => {
+                setLoading(false)
                 setWhatsOnTopSnippet(snippet)
               })
               .catch((err) => {
@@ -66,21 +68,29 @@ const WhatsOnTop = () => {
   //   setWhatsOnTopSnippet(await returnedOnTopSnippet)
   // }
 
-  if (whatsOnTopSnippet) {
-    return (
-      // I NEED TO ADD A KEYBOARD LISTENER HERE!!
-      <div className="component-container">
-        <button className="generate-button" onClick={clickHandler}>
-          "{whatsOnTopSnippet}
-          {corporateBullshit} based on the fact that {uselessFact}"
-        </button>
-      </div>
-    )
-  } else
+  if (loading) {
     return (
       <>
         <div className="component-container">
-          <button className="mini-generate-button" onClick={clickHandler}>
+          <button className="mini-generate-button">Loading...</button>
+        </div>
+      </>
+    )
+  } else if (whatsOnTopSnippet) {
+    return (
+      <div className="component-container">
+        <button className="generate-button" onClick={() => clickHandler}>
+          "{whatsOnTopSnippet}
+          {corporateBullshit} based on the fact that {uselessFact}"
+          <p className="generate-again">{`(click to generate again)`}</p>
+        </button>
+      </div>
+    )
+  } else if (!loading)
+    return (
+      <>
+        <div className="component-container">
+          <button className="mini-generate-button" onClick={() => clickHandler}>
             WHATS ON TOP
           </button>
         </div>
