@@ -79,7 +79,7 @@ const WhatsOnTop = () => {
   } else if (whatsOnTopSnippet) {
     return (
       <div className="component-container">
-        <button className="generate-button" onClick={clickHandler}>
+        <button className="generate-button" onClick={() => clickHandler}>
           "{whatsOnTopSnippet}
           {corporateBullshit} based on the fact that {uselessFact}"
           <p className="generate-again">{`(click to generate again)`}</p>
@@ -90,7 +90,7 @@ const WhatsOnTop = () => {
     return (
       <>
         <div className="component-container">
-          <button className="mini-generate-button" onClick={clickHandler}>
+          <button className="mini-generate-button" onClick={() => clickHandler}>
             WHATS ON TOP
           </button>
         </div>
