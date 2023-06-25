@@ -1,4 +1,5 @@
 {
+
   "name": "boilerplate-react-api",
   "version": "0.2.3",
   "description": "A webpack React starter",
@@ -97,5 +98,21 @@
     "preset": "ts-jest",
     "testEnvironment": "jsdom"
   },
-  "browserslist": "> 2%, not dead"
+  "browserslist": "> 2%, not dead",
+  "builds": [
+    {
+      "src": "./index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "./index.js",
+      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    }
+  ]
 }
