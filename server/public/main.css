@@ -161,6 +161,7 @@ label {
 }
 
 .generate-button {
+  position: relative;
   color: #483a5e;
   font-style: bold;
   font-size: 2vh;
@@ -180,6 +181,7 @@ label {
   justify-content: center;
   padding: 20px;
   overflow: hidden;
+  align-items: center;
 }
 
 p {
@@ -189,6 +191,15 @@ p {
 
 .generate-button-text {
   width: 100%;
+}
+
+.generate-again {
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: .8em;
+
 }
 
 .mini-generate-button {
@@ -204,6 +215,7 @@ p {
   color:#e7ae28;
   font-size: 2em;
   text-shadow: 2px 1px 2px #514b5c;
+  padding: 10px;
 }
 
 #button{

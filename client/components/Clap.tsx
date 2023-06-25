@@ -32,10 +32,10 @@ const Clap = () => {
         <button className="generate-button" onClick={clickHandler}>
           <i>
             <div className="generate-button-text">
-              <p>{clapSnippet1}...</p>
-              <p> {clapSnippet2}</p>
+              <p>{`${clapSnippet1} ... ${clapSnippet2}`}</p>
             </div>
           </i>
+          <p className="generate-again">{`(click to generate again)`}</p>
         </button>
       </div>
     )

@@ -10,6 +10,7 @@ export function FridayProject2() {
   const [appSnippet, setAppSnippet] = useState('')
   const [reqSnippet, setReqSnippet] = useState('')
   const [boredSnippet, setBoredSnippet] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const changeHandler = (event: ChangeEvent<HTMLSelectElement>) => {
     console.log(event.target.id)
@@ -21,6 +22,7 @@ export function FridayProject2() {
   }
 
   const handleSumbit = (evt: FormEvent) => {
+    setLoading(true)
     evt.preventDefault()
     getActivity(activityFormState.activity)
       .then((incomingBoredSnippet) => {
@@ -32,6 +34,7 @@ export function FridayProject2() {
             getAppSnippet()
               .then((incomingAppSnippet) => {
                 setAppSnippet(incomingAppSnippet)
+                setLoading(false)
               })
               .catch((err) => {
                 console.log(err.message)
@@ -44,7 +47,15 @@ export function FridayProject2() {
       .catch((err) => console.log(err.message))
   }
 
-  if (appSnippet) {
+  if (loading) {
+    return (
+      <>
+        <div className="component-container">
+          <button className="mini-generate-button">Loading...</button>
+        </div>
+      </>
+    )
+  } else if (appSnippet) {
     return (
       <div className="component-container">
         <div className="generate-button">
