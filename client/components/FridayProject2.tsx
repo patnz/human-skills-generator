@@ -21,7 +21,7 @@ export function FridayProject2() {
     console.log(activityFormState)
   }
 
-  const handleSumbit = (evt: FormEvent) => {
+  const handleSubmit = (evt: FormEvent) => {
     setLoading(true)
     evt.preventDefault()
     getActivity(activityFormState.activity)
@@ -58,15 +58,16 @@ export function FridayProject2() {
   } else if (appSnippet) {
     return (
       <div className="component-container">
-        <div className="generate-button">
+        <button className="generate-button" onClick={handleSubmit}>
           <div className="generate-button-text">{`Create ${appSnippet} that uses ${reqSnippet} to help you ${boredSnippet}`}</div>
-        </div>
+          <p className="generate-again">{`(click to generate again)`}</p>
+        </button>
       </div>
     )
   } else
     return (
       <div className="component-container">
-        <form className="form-container" onSubmit={handleSumbit}>
+        <form className="form-container" onSubmit={handleSubmit}>
           <label htmlFor="button">
             What kind of App would you like to make?
           </label>

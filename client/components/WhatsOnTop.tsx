@@ -17,11 +17,11 @@ const WhatsOnTop = () => {
       .then((fact) => {
         // THESE LODASH METHODS ARE JUST REFORMATTING THE INCOMING DATA
 
-        const formattedFact = _.upperCase(fact)
+        const formattedFact = _.lowerFirst(fact)
         const reformattedFact = _.replace(formattedFact, '`', "'")
         getCorporateBullshit()
           .then((bullshit) => {
-            const formattedBullshit = _.upperCase(bullshit)
+            const formattedBullshit = _.lowerCase(bullshit)
             setCorporateBullshit(formattedBullshit)
             setUselessFact(reformattedFact)
             getWhatsOnTopSnippet()
@@ -79,7 +79,7 @@ const WhatsOnTop = () => {
   } else if (whatsOnTopSnippet) {
     return (
       <div className="component-container">
-        <button className="generate-button" onClick={() => clickHandler}>
+        <button className="generate-button" onClick={clickHandler}>
           "{whatsOnTopSnippet}
           {corporateBullshit} based on the fact that {uselessFact}"
           <p className="generate-again">{`(click to generate again)`}</p>
@@ -90,7 +90,7 @@ const WhatsOnTop = () => {
     return (
       <>
         <div className="component-container">
-          <button className="mini-generate-button" onClick={() => clickHandler}>
+          <button className="mini-generate-button" onClick={clickHandler}>
             WHATS ON TOP
           </button>
         </div>
